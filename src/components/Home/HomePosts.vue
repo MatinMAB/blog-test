@@ -1,67 +1,28 @@
 <template>
   <div class="ui special cards grid">
-    <div class="card five wide column">
+    <div class="card five wide column" v-for="post in posts" :key="post.id">
       <div class="blurring dimmable image">
         <img src="../../assets/images/image.png" />
       </div>
       <div class="content">
-        <a class="header">Team Fu {{ width }}</a>
-        <div class="meta">
-          <span class="date">Created in Sep 2014</span>
+        <a class="header">{{ shorten(post.title) }}</a>
+        <div>
+          <a>
+            <i class="user icon violet"></i>
+            Chelsey Dietrich
+          </a>
         </div>
       </div>
       <div class="extra content">
         <a>
-          <i class="users icon"></i>
-          2 Members
+          <i class="heart icon red"></i>
+          17 بار پسندیده شده
         </a>
       </div>
-    </div>
-    <div class="card five wide column">
-      <div class="blurring dimmable image">
-        <div class="ui dimmer">
-          <div class="content">
-            <div class="center">
-              <div class="ui inverted button">Add Friend</div>
-            </div>
-          </div>
-        </div>
-        <img src="../../assets/images/image.png" />
-      </div>
-      <div class="content">
-        <a class="header">Team Fu</a>
-        <div class="meta">
-          <span class="date">Created in Sep 2014</span>
-        </div>
-      </div>
       <div class="extra content">
         <a>
-          <i class="users icon"></i>
-          2 Members
-        </a>
-      </div>
-    </div>
-    <div class="card five wide column">
-      <div class="blurring dimmable image">
-        <div class="ui dimmer">
-          <div class="content">
-            <div class="center">
-              <div class="ui inverted button">Add Friend</div>
-            </div>
-          </div>
-        </div>
-        <img src="../../assets/images/image.png" />
-      </div>
-      <div class="content">
-        <a class="header">Team Fu</a>
-        <div class="meta">
-          <span class="date">Created in Sep 2014</span>
-        </div>
-      </div>
-      <div class="extra content">
-        <a>
-          <i class="users icon"></i>
-          2 Members
+          <i class="comment icon black"></i>
+          نوشته شده در آبان ، 1400
         </a>
       </div>
     </div>
@@ -71,17 +32,30 @@
 <script>
 export default {
   data() {
-    return {
-      width: window.innerWidth,
-    };
+    return {};
+  },
+  computed: {
+    posts() {
+      return this.$store.state.posts;
+    },
+  },
+  methods: {
+    shorten(title) {
+      const newTitle = title.split(" ");
+      return newTitle[0] + " " + newTitle[1];
+    },
   },
   mounted() {
-    
+    this.$store.dispatch("getPosts");
   },
 };
 </script>
 
 <style scoped>
+.card.five.wide.column:hover{
+  background-color:rgb(248, 248, 248);
+  box-shadow: 0 0 10px rgba(0,0,0,.7)
+}
 @media screen and (max-width: 888px) {
   .card.five.wide.column {
     width: 47% !important;

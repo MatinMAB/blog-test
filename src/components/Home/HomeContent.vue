@@ -1,12 +1,14 @@
 <template>
-  <div class="container"> 
-    <h2>مقالات</h2>
-    <div class="ui two column stackable grid">
-      <div class="twelve wide column">
-        <HomePosts />
-      </div>
-      <div class="four wide column">
-        <HomeSidebar />
+  <div>
+    <div class="container">
+      <h2>مقالات</h2>
+      <div class="ui column stackable grid">
+        <div class="twelve wide column">
+          <HomePosts />
+        </div>
+        <div class="four wide column">
+          <Sidebar />
+        </div>
       </div>
     </div>
   </div>
@@ -14,22 +16,23 @@
 
 <script>
 import HomePosts from "./HomePosts";
-import HomeSidebar from "./HomeSidebar";
+import Sidebar from "../shared/Sidebar";
+
 export default {
   name: "HomeContent",
   components: {
     HomePosts,
-    HomeSidebar,
+    Sidebar,
   },
 };
 </script>
 
 <style scoped>
-.ui.grid{
+.ui.grid {
   margin-top: 15px;
 }
-h2{
+h2 {
   margin-top: 30px !important;
-  border-bottom : 2px solid silver;
+  border-bottom: 2px solid silver;
 }
 </style>
