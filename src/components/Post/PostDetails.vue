@@ -1,5 +1,11 @@
 <template lang="">
-  <div class="postDetail">
+  <div v-if="!post" class="ui segment" style="height:80px;">
+    <div class="ui active inverted dimmer">
+      <div class="ui text loader">Loading</div>
+    </div>
+    <p></p>
+  </div>
+  <div v-else class="postDetail">
     <img src="../../assets/images/image.png" class="postImage" />
     <h2>عنوان : {{ post.title }}</h2>
     <h5>Chelsey Dietrich</h5>
@@ -46,7 +52,7 @@
       </div>
     </div>
 
-      <h3 class="ui dividing header">نظرات</h3>
+    <h3 class="ui dividing header">نظرات</h3>
     <div class="ui comments">
       <div class="comment">
         <a class="avatar">
@@ -183,10 +189,10 @@ p {
 .icon {
   cursor: pointer;
 }
-h3.ui.dividing.header{
+h3.ui.dividing.header {
   margin-top: 55px !important;
 }
-.comments{
+.comments {
   margin: 30px auto;
 }
 .author {

@@ -1,5 +1,11 @@
 <template lang="">
-  <div class="ui special cards grid">
+  <div v-if="posts.length == 0" class="ui segment" style="height:80px;">
+    <div class="ui active inverted dimmer">
+      <div class="ui text loader">Loading</div>
+    </div>
+    <p></p>
+  </div>
+  <div v-else class="ui special cards grid">
     <div class="card five wide column" v-for="post in posts" :key="post.id">
       <div class="blurring dimmable image">
         <img src="../../assets/images/image.png" />
@@ -52,9 +58,9 @@ export default {
 </script>
 
 <style scoped>
-.card.five.wide.column:hover{
-  background-color:rgb(248, 248, 248);
-  box-shadow: 0 0 10px rgba(0,0,0,.7)
+.card.five.wide.column:hover {
+  background-color: rgb(248, 248, 248);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 @media screen and (max-width: 888px) {
   .card.five.wide.column {
