@@ -1,9 +1,9 @@
 <template lang="">
   <div class="container">
     <h2>محل تبلیغات</h2>
-    <div class="ui stackable celled grid container">
-      <div class="three column row">
-        <div class="column ui" v-for="col in 3">
+    <div class="ui stackable celled grid">
+      <div class="five column row">
+        <div class="column" v-for="col in 5">
           <div class="ui segment">
             <a href="#" class="ui image">
               <img src="../../assets/images/image.png" />
@@ -19,7 +19,7 @@ export default {};
 </script>
 <style scoped>
 h2 {
-  margin-top: 30px !important;
+  margin: 30px  0!important;
   border-bottom: 2px solid silver;
 }
 </style>

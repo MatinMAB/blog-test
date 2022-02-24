@@ -4,6 +4,7 @@ import axios from "axios";
 export default createStore({
   state() {
     return {
+      post:{},
       posts: [],
       category: [
         {
@@ -49,10 +50,16 @@ export default createStore({
     SET_POSTS(state, payload) {
       state.posts = payload;
     },
+    SET_POST(state, payload) {
+      state.post = payload;
+    },
   },
   actions: {
     getPosts(context) {
       axios.get("https://jsonplaceholder.typicode.com/posts?_limit=12").then((res) => context.commit("SET_POSTS", res.data));
+    },
+    getPost(context,payload) {
+      axios.get(`https://jsonplaceholder.typicode.com/posts/${payload}`).then((res) => context.commit("SET_POST", res.data));
     },
   },
   modules: {},

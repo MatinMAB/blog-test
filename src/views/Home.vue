@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <div>
     <Navbar />
     <PageTitle title="سایت بلاگ" description="به سایت ما خوش آمدید"/>

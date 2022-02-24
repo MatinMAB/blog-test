@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <div class="ui special cards grid">
     <div class="card five wide column" v-for="post in posts" :key="post.id">
       <div class="blurring dimmable image">

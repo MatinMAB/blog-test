@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <div class="ui card">
     <p>دسته بندی ها</p>
     <div class="ui list">

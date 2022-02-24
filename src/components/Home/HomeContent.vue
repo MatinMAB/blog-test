@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <div>
     <div class="container">
       <h2>مقالات</h2>

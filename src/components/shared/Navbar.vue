@@ -1,10 +1,10 @@
-<template>
+<template lang="">
   <div class="ui inverted segment">
     <div class="container">
       <div class="ui inverted secondary pointing menu">
         <div class="right menu">
           <router-link to="/" class="item" :class="{ active: $route.fullPath == '/' }"> خانه </router-link>
-          <a class="item"> دسته بندی مقالات </a>
+          <router-link to="/categories" class="item" :class="{ active: $route.fullPath == '/categories' }"> دسته بندی مقالات </router-link>
         </div>
         <div class="left menu">
           <router-link to="/sign-up" class="ui item"> ثبت نام </router-link>
