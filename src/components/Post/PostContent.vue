@@ -29,7 +29,7 @@ h2 {
   margin: 40px 0 30px !important;
   border-bottom: 2px solid silver;
 }
-.ui.segment{
-  margin-top : 25px;
+.ui.segment {
+  margin-top: 25px;
 }
 </style>

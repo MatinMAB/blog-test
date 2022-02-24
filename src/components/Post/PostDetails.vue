@@ -45,96 +45,95 @@
         <span>آبان ماه ، 1400</span>
       </div>
     </div>
-    <div>
-      <div class="ui comments">
-        <h3 class="ui dividing header">نظرات</h3>
-        <div class="comment">
-          <a class="avatar">
-            <img src="../../assets/images/image.png" />
-          </a>
-          <div class="content">
-            <a class="author">مهدی</a>
-            <div class="metadata">
-              <span class="date">امروز در 17:42</span>
-            </div>
-            <div class="text">
-              <p>مفید بود</p>
-            </div>
-            <div class="actions">
-              <a class="reply">پاسخ دادن</a>
-            </div>
-          </div>
-        </div>
-        <div class="ui divider"></div>
 
-        <div class="comment" style="margin-right: 40px">
-          <a class="avatar">
-            <img src="../../assets/images/image.png" />
-          </a>
-          <div class="content">
-            <a class="author">حسین</a>
-            <div class="metadata">
-              <span class="date">دیروز در 00:48</span>
-            </div>
-            <div class="text">
-              <p>متن لورم متنی بی معنی به مزاج برنامه نویسان و طراحان وب خوشایند باشد.</p>
-            </div>
-            <div class="actions">
-              <a class="reply">پاسخ دادن</a>
-            </div>
+      <h3 class="ui dividing header">نظرات</h3>
+    <div class="ui comments">
+      <div class="comment">
+        <a class="avatar">
+          <img src="../../assets/images/image.png" />
+        </a>
+        <div class="content">
+          <a class="author">مهدی</a>
+          <div class="metadata">
+            <span class="date">امروز در 17:42</span>
+          </div>
+          <div class="text">
+            <p>مفید بود</p>
+          </div>
+          <div class="actions">
+            <a class="reply">پاسخ دادن</a>
           </div>
         </div>
-        <div class="ui divider"></div>
-
-        <div class="comment">
-          <a class="avatar">
-            <img src="../../assets/images/image.png" />
-          </a>
-          <div class="content">
-            <a class="author">محمد</a>
-            <div class="metadata">
-              <span class="date">5 روز پیش</span>
-            </div>
-            <div class="text">مقاله بسیار مفیدی بود</div>
-            <div class="actions">
-              <a class="reply">پاسخ دادن</a>
-            </div>
-          </div>
-        </div>
-        <div class="ui divider"></div>
-
-        <div class="comment">
-          <a class="avatar">
-            <img src="../../assets/images/image.png" />
-          </a>
-          <div class="content">
-            <a class="author">میتن</a>
-            <div class="metadata">
-              <span class="date">همین الان</span>
-            </div>
-            <div class="text">باریکلا :)</div>
-            <div class="actions">
-              <a class="reply">پاسخ دادن</a>
-            </div>
-          </div>
-        </div>
-        <form class="ui reply form">
-          <grammarly-extension
-            data-grammarly-shadow-root="true"
-            style="position: absolute; top: 0px; left: 0px; pointer-events: none"
-            class="cGcvT"
-          ></grammarly-extension
-          ><grammarly-extension
-            data-grammarly-shadow-root="true"
-            style="mix-blend-mode: darken; position: absolute; top: 0px; left: 0px; pointer-events: none"
-            class="cGcvT"
-          ></grammarly-extension>
-          <div class="field">
-            <textarea spellcheck="false"></textarea>
-          </div>
-          <div class="ui blue labeled submit icon button"><i class="icon edit"></i>ثبت نظر</div>
-        </form>
       </div>
+      <div class="ui divider"></div>
+
+      <div class="comment" style="margin-right: 40px">
+        <a class="avatar">
+          <img src="../../assets/images/image.png" />
+        </a>
+        <div class="content">
+          <a class="author">حسین</a>
+          <div class="metadata">
+            <span class="date">دیروز در 00:48</span>
+          </div>
+          <div class="text">
+            <p>متن لورم متنی بی معنی به مزاج برنامه نویسان و طراحان وب خوشایند باشد.</p>
+          </div>
+          <div class="actions">
+            <a class="reply">پاسخ دادن</a>
+          </div>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+
+      <div class="comment">
+        <a class="avatar">
+          <img src="../../assets/images/image.png" />
+        </a>
+        <div class="content">
+          <a class="author">محمد</a>
+          <div class="metadata">
+            <span class="date">5 روز پیش</span>
+          </div>
+          <div class="text">مقاله بسیار مفیدی بود</div>
+          <div class="actions">
+            <a class="reply">پاسخ دادن</a>
+          </div>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+
+      <div class="comment">
+        <a class="avatar">
+          <img src="../../assets/images/image.png" />
+        </a>
+        <div class="content">
+          <a class="author">میتن</a>
+          <div class="metadata">
+            <span class="date">همین الان</span>
+          </div>
+          <div class="text">مفید بود 🌹</div>
+          <div class="actions">
+            <a class="reply">پاسخ دادن</a>
+          </div>
+        </div>
+      </div>
+      <form class="ui reply form">
+        <grammarly-extension
+          data-grammarly-shadow-root="true"
+          style="position: absolute; top: 0px; left: 0px; pointer-events: none"
+          class="cGcvT"
+        ></grammarly-extension
+        ><grammarly-extension
+          data-grammarly-shadow-root="true"
+          style="mix-blend-mode: darken; position: absolute; top: 0px; left: 0px; pointer-events: none"
+          class="cGcvT"
+        ></grammarly-extension>
+        <div class="field">
+          <textarea spellcheck="false"></textarea>
+        </div>
+        <div class="ui blue labeled submit icon button"><i class="icon edit"></i>ثبت نظر</div>
+      </form>
     </div>
   </div>
 </template>
@@ -184,8 +183,11 @@ p {
 .icon {
   cursor: pointer;
 }
-.comments {
-  margin-top: 35px !important;
+h3.ui.dividing.header{
+  margin-top: 55px !important;
+}
+.comments{
+  margin: 30px auto;
 }
 .author {
   padding-left: 10px;

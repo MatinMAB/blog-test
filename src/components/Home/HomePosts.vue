@@ -5,7 +5,7 @@
         <img src="../../assets/images/image.png" />
       </div>
       <div class="content">
-        <a class="header">{{ shorten(post.title) }}</a>
+        <router-link :to="`/posts/${post.id}`" class="header">{{ shorten(post.title) }}</router-link>
         <div>
           <a>
             <i class="user icon violet"></i>
