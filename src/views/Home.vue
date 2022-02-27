@@ -1,7 +1,7 @@
 <template lang="">
   <div>
     <Navbar />
-    <PageTitle title="سایت بلاگ" description="به سایت ما خوش آمدید"/>
+    <PageTitle/>
     <HomeADS />
     <HomeContent />
     <Footer />
@@ -11,7 +11,7 @@
 <script>
 // @ is an alias to /src
 import Navbar from "../components/shared/Navbar";
-import PageTitle from "../components/shared/PageTitle";
+import PageTitle from "../components/Home/PageTitle";
 import Footer from "../components/shared/Footer";
 import HomeContent from "../components/Home/HomeContent";
 import HomeADS from "../components/Home/HomeADS";

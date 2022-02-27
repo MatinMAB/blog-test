@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="loginBox">
+  <!-- <div class="loginBox">
     <div class="ui middle aligned center aligned grid container">
       <div class="column ">
         <h2 class="ui teal image header">
@@ -25,12 +25,13 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 <script>
 export default {};
 </script>
 <style>
+/*
 .container {
 }
 .ui.stacked.segment {
@@ -55,5 +56,5 @@ export default {};
 }
 input::placeholder {
   font-family: "sahel";
-}
+}*/
 </style>

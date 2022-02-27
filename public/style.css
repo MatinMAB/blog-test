@@ -10,3 +10,9 @@ h1,h2,h3,h4,h5,h6,p,a,span,button,div{
   box-sizing: 0;
   font-family: "sahel";
 }
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 5px;
+}
+

@@ -7,8 +7,8 @@
           <router-link to="/categories" class="item" :class="{ active: $route.fullPath == '/categories' }"> دسته بندی مقالات </router-link>
         </div>
         <div class="left menu">
-          <router-link to="/sign-up" class="ui item"> ثبت نام </router-link>
-          <router-link to="/login" class="ui item"> ورود </router-link>
+          <a href="https://darikex.com/auth/signup" class="ui item"> ثبت نام </a>
+          <a href="https://darikex.com/auth/signin" class="ui item"> ورود </a>
         </div>
       </div>
     </div>
@@ -20,5 +20,13 @@ export default {};
 </script>
 
 <style scoped>
-@import "../../assets/css/navbar.css";
+.ui.inverted.segment {
+  border-radius: 0;
+  margin-bottom: 0 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 99 !important;
+  border-bottom: 1px solid #fff;
+}
+
 </style>
