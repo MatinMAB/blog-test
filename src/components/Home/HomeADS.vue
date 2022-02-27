@@ -1,7 +1,7 @@
 <template lang="">
   <div class="container">
     <h2>محل تبلیغات</h2>
-    <div class="ui stackable celled grid container">
+    <div class="ui stackable celled grid container" style="direction: ltr;">
       <div class="three column row">
         <div class="column ui" v-for="col in 3">
           <div class="ui segment">

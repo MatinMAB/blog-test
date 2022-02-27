@@ -38,7 +38,7 @@ export default {
 </script>
 <style scoped>
 h2 {
-  margin: 30px 0 !important;
+  margin: 60px 0 40px !important;
   border-bottom: 2px solid silver;
 }
 .ui.small.image {

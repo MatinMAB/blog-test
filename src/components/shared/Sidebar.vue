@@ -40,7 +40,7 @@ export default {
   padding : 5px;
   background-color : #1B1C1D;
   position : sticky !important;
-  top : 15px !important;
+  top : 90px !important;
 }
 p{
   padding : 5px 5px 0 0;

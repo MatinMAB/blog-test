@@ -3,11 +3,11 @@
     <div class="container">
       <h2>مقالات</h2>
       <div class="ui column stackable grid">
-        <div class="twelve wide column">
-          <HomePosts />
-        </div>
         <div class="four wide column">
           <Sidebar />
+        </div>
+        <div class="twelve wide column">
+          <HomePosts />
         </div>
       </div>
     </div>
