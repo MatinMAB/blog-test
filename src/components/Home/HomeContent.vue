@@ -1,7 +1,7 @@
 <template lang="">
   <div>
     <div class="container">
-      <h2>مقالات</h2>
+      <h2>مقالات اخیر</h2>
       <div class="ui column stackable grid">
         <div class="four wide column">
           <Sidebar />
@@ -32,7 +32,7 @@ export default {
   margin-top: 15px;
 }
 h2 {
-  margin-top: 30px !important;
+  margin-top: 50px !important;
   border-bottom: 2px solid silver;
 }
 </style>

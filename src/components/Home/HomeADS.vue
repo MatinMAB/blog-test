@@ -1,7 +1,7 @@
 <template lang="">
   <div class="container">
     <h2>محل تبلیغات</h2>
-    <div class="ui stackable celled grid container" style="direction: ltr;">
+    <div class="ui stackable celled grid container" style="direction: ltr">
       <div class="three column row">
         <div class="column ui" v-for="col in 3">
           <div class="ui segment">
@@ -19,7 +19,7 @@ export default {};
 </script>
 <style scoped>
 h2 {
-  margin-top: 30px !important;
+  margin: 50px 0 30px !important;
   border-bottom: 2px solid silver;
 }
 </style>

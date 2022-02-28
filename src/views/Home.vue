@@ -3,6 +3,7 @@
     <Navbar />
     <PageTitle/>
     <HomeADS />
+    <FastAccess/>
     <HomeContent />
     <Footer />
   </div>
@@ -15,10 +16,12 @@ import PageTitle from "../components/Home/PageTitle";
 import Footer from "../components/shared/Footer";
 import HomeContent from "../components/Home/HomeContent";
 import HomeADS from "../components/Home/HomeADS";
+import FastAccess from "../components/Home/FastAccess";
 export default {
   name: "Home",
   components: {
     HomeContent,
+    FastAccess,
     HomeADS,
     PageTitle,
     Navbar,

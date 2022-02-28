@@ -17,9 +17,6 @@ export default {
   components : {
     SubCategorySidebar,
   },
-  data() {
-    return {};
-  },
   computed: {
     categories() {
       return this.$store.state.category;
