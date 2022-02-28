@@ -10,7 +10,9 @@ export default {};
 div {
   background-color: #00a750;
   color: #fff;
-  padding: 5px;
+  padding: 8px;
+  overflow: hidden;
+  line-height:8px;
 }
 p {
   -moz-animation: marquee 18s linear infinite;
