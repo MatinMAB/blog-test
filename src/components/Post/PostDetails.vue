@@ -1,5 +1,5 @@
 <template lang="">
-  <div v-if="!post" class="ui segment" style="height:80px;">
+  <div v-if="!post" class="ui segment" style="height: 80px">
     <div class="ui active inverted dimmer">
       <div class="ui text loader">Loading</div>
     </div>
@@ -62,11 +62,13 @@
           <a class="author">مهدی</a>
           <div class="metadata">
             <span class="date">امروز در 17:42</span>
+            <i class="thumbs down icon gray"></i>
+            <i class="thumbs up icon gray"></i>
           </div>
           <div class="text">
             <p>مفید بود</p>
           </div>
-          <div class="actions">
+          <div class="actions" v-if="isLoggedIn">
             <a class="reply">پاسخ دادن</a>
           </div>
         </div>
@@ -81,11 +83,13 @@
           <a class="author">حسین</a>
           <div class="metadata">
             <span class="date">دیروز در 00:48</span>
+            <i class="thumbs down icon gray"></i>
+            <i class="thumbs up icon gray"></i>
           </div>
           <div class="text">
             <p>متن لورم متنی بی معنی به مزاج برنامه نویسان و طراحان وب خوشایند باشد.</p>
           </div>
-          <div class="actions">
+          <div class="actions"  v-if="isLoggedIn">
             <a class="reply">پاسخ دادن</a>
           </div>
         </div>
@@ -100,9 +104,11 @@
           <a class="author">محمد</a>
           <div class="metadata">
             <span class="date">5 روز پیش</span>
+            <i class="thumbs down icon gray"></i>
+            <i class="thumbs up icon gray"></i>
           </div>
           <div class="text">مقاله بسیار مفیدی بود</div>
-          <div class="actions">
+          <div class="actions"  v-if="isLoggedIn">
             <a class="reply">پاسخ دادن</a>
           </div>
         </div>
@@ -117,14 +123,16 @@
           <a class="author">میتن</a>
           <div class="metadata">
             <span class="date">همین الان</span>
+            <i class="thumbs down icon gray"></i>
+            <i class="thumbs up icon gray"></i>
           </div>
           <div class="text">مفید بود 🌹</div>
-          <div class="actions">
+          <div class="actions"  v-if="isLoggedIn">
             <a class="reply">پاسخ دادن</a>
           </div>
         </div>
       </div>
-      <form class="ui reply form">
+      <form class="ui reply form"  v-if="isLoggedIn">
         <grammarly-extension
           data-grammarly-shadow-root="true"
           style="position: absolute; top: 0px; left: 0px; pointer-events: none"
@@ -149,10 +157,12 @@ import { mapState } from "vuex";
 export default {
   name: "PostDetails",
   data() {
-    return {};
+    return {
+    };
   },
   computed: {
-    ...mapState(["post"]),
+    ...mapState(["post","isLoggedIn"]),
+
   },
   mounted() {
     this.$store.dispatch("getPost", this.$route.params.id);
@@ -197,5 +207,12 @@ h3.ui.dividing.header {
 }
 .author {
   padding-left: 10px;
+}
+.metadata .date{
+  margin-left : 15px !important;
+}
+.metadata i {
+  display: inline-block !important;
+  margin: 0 2px !important;
 }
 </style>

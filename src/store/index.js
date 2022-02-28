@@ -44,6 +44,7 @@ export default createStore({
           icon: "rss",
         },
       ],
+      isLoggedIn : false,
     };
   },
   mutations: {
