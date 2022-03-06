@@ -3,7 +3,7 @@
     <div class="ui card">
       <div class="content">
         <div class="left floated meta">14h</div>
-        <img class="ui avatar image" src="../../assets/images/image.png" /> Elliot
+        <img class="ui avatar image" src="../../assets/images/image.png" /> Post Title
       </div>
       <div class="image">
         <img src="../../assets/images/image.png" />

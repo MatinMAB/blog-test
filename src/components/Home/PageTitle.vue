@@ -16,6 +16,8 @@ export default {
 <style scoped>
 .ui.inverted.vertical.masthead.center.aligned.segment {
   height: calc(100vh - 70px);
+    padding: 30px 0;
+
 }
 .ui.text.container {
   height: 100%;

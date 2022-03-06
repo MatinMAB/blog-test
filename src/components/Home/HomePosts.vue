@@ -1,5 +1,5 @@
 <template lang="">
-  <div v-if="posts.length == 0" class="ui segment" style="height:80px;">
+  <div v-if="posts.length == 0" class="ui segment" style="height: 80px">
     <div class="ui active inverted dimmer">
       <div class="ui text loader">Loading</div>
     </div>
@@ -12,12 +12,15 @@
       </div>
       <div class="content">
         <router-link :to="`/posts/${post.id}`" class="header">{{ shorten(post.title) }}</router-link>
+
         <div>
           <a>
             <i class="user icon violet"></i>
             Chelsey Dietrich
           </a>
         </div>
+
+        <div class="ui green rating disabled mini" data-icon="star" data-rating="5" data-max-rating="7"></div>
       </div>
       <div class="extra content">
         <a>
@@ -52,6 +55,8 @@ export default {
     },
   },
   mounted() {
+    $(".ui.rating").rating();
+
     this.$store.dispatch("getPosts");
   },
 };
@@ -61,6 +66,9 @@ export default {
 .card.five.wide.column:hover {
   background-color: rgb(248, 248, 248);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.ui.rating {
+  padding: 5px;
 }
 @media screen and (max-width: 888px) {
   .card.five.wide.column {

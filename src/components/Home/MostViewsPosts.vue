@@ -6,11 +6,14 @@
       </div>
       <div class="content">
         <router-link :to="`/posts/${post.id}`" class="header">{{ shorten(post.title) }}</router-link>
-        <div>
-          <a>
-            <i class="user icon violet"></i>
-            Chelsey Dietrich
-          </a>
+        <div class="content-extra">
+          <div>
+            <a>
+              <i class="user icon violet"></i>
+              Chelsey Dietrich
+            </a>
+          </div>
+          <div class="ui green mini disabled rating" data-icon="star" data-rating="2" data-max-rating="7"></div>
         </div>
       </div>
       <div class="extra content">
@@ -44,6 +47,9 @@ export default {
       return newTitle[0] + " " + newTitle[1];
     },
   },
+  mounted() {
+    $(".ui.rating").rating();
+  },
 };
 </script>
 <style scoped>
@@ -51,7 +57,13 @@ export default {
   transform: scaleX(0.2);
   opacity: 0;
   animation: card 0.3s ease forwards;
-  margin-bottom: 60px;
+  margin:0 30px 60px 0 !important;
+}
+.content-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 @keyframes card {
   0% {
