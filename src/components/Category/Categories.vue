@@ -8,10 +8,17 @@
             <img src="../../assets/images/image.png" />
           </div>
           <div class="content">
-            <a class="header"><SubCategory :item="item" /> </a>
+            <div class="ui compact menu">
+              <div class="ui simple dropdown item">
+                {{ item.name }}
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item" v-for="index in 2" v-on:click="showMessage(index)">{{ item.name }} - {{ index }}</div>
+                </div>
+              </div>
+            </div>
             <div class="meta">نعداد مقالات : 14</div>
-            <div class="description">
-              توضیحی کوتاه در باب موضوع موجود در سایت ...</div>
+            <div class="description">توضیحی کوتاه در باب موضوع موجود در سایت ...</div>
             <div class="extra">
               <div class="ui right floated black button">
                 دیدن مقالات
@@ -25,17 +32,25 @@
   </div>
 </template>
 <script>
-import SubCategory from "./SubCategory.vue";
 export default {
   name: "Categories",
   components: {
-    SubCategory,
   },
 
   computed: {
     category() {
       return this.$store.state.category;
     },
+  },
+
+  methods: {
+    showMessage(index) {
+      console.log(index);
+    },
+  },
+
+  mounted() {
+    $(".ui.dropdown").dropdown();
   },
 };
 </script>
@@ -55,23 +70,34 @@ h2 {
 .item {
   border-top: none !important;
   padding: 1.5em 0 !important;
-  border-bottom: 1px  solid #00a750 !important;
+  border-bottom: 1px solid #00a750 !important;
 }
 .ui.divided.items > .item:first-child,
 .ui.divided.items > .item:last-child {
   padding: 1.5em 0 !important;
 }
 .ui.divided.items > .item:last-child {
-    border-bottom: 1px  solid transparent !important;
-
+  border-bottom: 1px solid transparent !important;
 }
-.meta{
-  color : #00c760 !important;
+.meta {
+  color: #00c760 !important;
 }
-@media screen and (max-width:400px) {
-  .ui.relaxed.divided.items{
+.ui.compact.menu {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.ui.simple.dropdown.item {
+  background: transparent !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+}
+.ui.compact.menu .item {
+  border-bottom: none !important;
+}
+@media screen and (max-width: 400px) {
+  .ui.relaxed.divided.items {
     grid-template-columns: 1fr !important;
   }
-  
 }
 </style>
