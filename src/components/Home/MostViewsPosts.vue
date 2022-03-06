@@ -46,9 +46,16 @@ export default {
       const newTitle = title.split(" ");
       return newTitle[0] + " " + newTitle[1];
     },
+    mountRating() {
+      $(".ui.rating").rating();
+    },
   },
   mounted() {
-    $(".ui.rating").rating();
+    this.mountRating();
+    document.addEventListener("scroll", this.mountRating);
+  },
+  unmounted() {
+    document.removeEventListener("scroll", this.mountRating);
   },
 };
 </script>
@@ -57,7 +64,7 @@ export default {
   transform: scaleX(0.2);
   opacity: 0;
   animation: card 0.3s ease forwards;
-  margin:0 30px 60px 0 !important;
+  margin: 0 30px 60px 0 !important;
 }
 .content-extra {
   display: flex;

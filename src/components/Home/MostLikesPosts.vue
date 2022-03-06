@@ -46,9 +46,16 @@ export default {
       const newTitle = title.split(" ");
       return newTitle[0] + " " + newTitle[1];
     },
+    mountRating() {
+      $(".ui.rating").rating();
+    },
   },
   mounted() {
-    $(".ui.rating").rating();
+    this.mountRating();
+    document.addEventListener("scroll", this.mountRating);
+  },
+  unmounted() {
+    document.removeEventListener("scroll", this.mountRating);
   },
 };
 </script>
