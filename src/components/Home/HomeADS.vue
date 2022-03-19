@@ -15,7 +15,9 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "HomeADS",
+};
 </script>
 <style scoped>
 h2 {

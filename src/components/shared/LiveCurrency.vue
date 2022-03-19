@@ -26,7 +26,6 @@ export default {
       const getCurrenciesPromise = new Promise((resolve, reject) => {
         this.connection = new WebSocket("wss://stream.binance.com:9443/ws/!ticker@arr");
         this.connection.onmessage = function (event) {
-          console.log(JSON.parse(event.data));
           resolve(JSON.parse(event.data));
           reject("Something Went Wrong :(");
         };
@@ -34,7 +33,6 @@ export default {
       getCurrenciesPromise
         .then((currencies) => {
           this.currencies = currencies;
-          console.log(this.currencies);
         })
         .catch((err) => {
           console.error(err);

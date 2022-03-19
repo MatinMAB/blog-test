@@ -17,11 +17,13 @@
   </div>
 </template>
 <script>
+//Use Swiper Slider
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
 
+//Components
 import SwiperSlide from "../Post/SwiperSlide.vue";
 
 export default {

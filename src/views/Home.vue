@@ -11,6 +11,7 @@
 
 <script>
 // @ is an alias to /src
+//Components
 import Navbar from "../components/shared/Navbar";
 import PageTitle from "../components/Home/PageTitle";
 import Footer from "../components/shared/Footer";

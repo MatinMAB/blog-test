@@ -14,8 +14,10 @@
   </div>
 </template>
 <script>
+//Components
 import PostDetails from "./PostDetails.vue";
 import Sidebar from "../shared/Sidebar.vue";
+
 export default {
   name: "PostContent",
   components: {

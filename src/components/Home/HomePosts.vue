@@ -40,6 +40,7 @@
 
 <script>
 export default {
+  name: "HomePosts",
   data() {
     return {};
   },
@@ -60,6 +61,8 @@ export default {
   mounted() {
     this.mountRating();
     this.$store.dispatch("getPosts");
+
+    //using this code cause of 'ui.rating' does not render in the first ui rendered, So it's show in scrolling 
     document.addEventListener("scroll", this.mountRating);
   },
   unmounted() {

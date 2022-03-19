@@ -71,7 +71,7 @@ export default {
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
   },
-  created() {
+  mounted() {
     window.addEventListener("scroll", this.showBackToTop);
   },
   unmounted() {

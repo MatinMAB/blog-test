@@ -9,8 +9,10 @@
   </div>
 </template>
 <script>
+//Components
 import MostViewsPosts from "./MostViewsPosts.vue";
 import MostLikesPosts from "./MostLikesPosts.vue";
+
 export default {
   name: "fastAccess",
   data() {

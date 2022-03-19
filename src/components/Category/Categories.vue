@@ -13,7 +13,7 @@
                 {{ item.name }}
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                  <div class="item" v-for="index in 2" v-on:click="showMessage(index)">{{ item.name }} - {{ index }}</div>
+                  <div class="item" v-for="index in 2">{{ item.name }} - {{ index }}</div>
                 </div>
               </div>
             </div>
@@ -34,21 +34,11 @@
 <script>
 export default {
   name: "Categories",
-  components: {
-  },
-
   computed: {
     category() {
       return this.$store.state.category;
     },
   },
-
-  methods: {
-    showMessage(index) {
-      console.log(index);
-    },
-  },
-
   mounted() {
     $(".ui.dropdown").dropdown();
   },

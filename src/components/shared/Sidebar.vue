@@ -10,7 +10,9 @@
             <i class="dropdown icon"></i>
           </div>
           <div class="content">
-            <p v-for="(index, subCategory) in 2" :key="subCategory">{{ category.name }} - {{ index }}</p>
+            <p v-for="(index, subCategory) in 2" :key="subCategory">
+              {{ category.name }} - {{ index }}
+            </p>
           </div>
         </div>
       </div>
@@ -21,7 +23,6 @@
 <script>
 export default {
   name: "Sidebar",
-  components: {},
   computed: {
     categories() {
       return this.$store.state.category;

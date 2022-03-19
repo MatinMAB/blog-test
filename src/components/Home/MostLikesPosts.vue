@@ -1,11 +1,17 @@
 <template lang="">
   <div class="ui special cards grid">
-    <div class="card five wide column" v-for="post in mostViewPosts" :key="post.id">
+    <div
+      class="card five wide column"
+      v-for="post in mostViewPosts"
+      :key="post.id"
+    >
       <div class="blurring dimmable image">
         <img src="../../assets/images/image.png" />
       </div>
       <div class="content">
-        <router-link :to="`/posts/${post.id}`" class="header">{{ shorten(post.title) }}</router-link>
+        <router-link :to="`/posts/${post.id}`" class="header">{{
+          shorten(post.title)
+        }}</router-link>
         <div class="content-extra">
           <div>
             <a>
@@ -13,7 +19,12 @@
               Chelsey Dietrich
             </a>
           </div>
-          <div class="ui green mini disabled rating" data-icon="star" data-rating="4" data-max-rating="7"></div>
+          <div
+            class="ui green mini disabled rating"
+            data-icon="star"
+            data-rating="4"
+            data-max-rating="7"
+          ></div>
         </div>
       </div>
       <div class="extra content">
@@ -32,9 +43,11 @@
   </div>
 </template>
 <script>
+//use State Store
 import { mapState } from "vuex";
+
 export default {
-  name: "MostViewsPosts",
+  name: "MostLikesPosts",
   computed: {
     ...mapState(["posts"]),
     mostViewPosts() {
@@ -52,6 +65,8 @@ export default {
   },
   mounted() {
     this.mountRating();
+
+    //using this code cause of 'ui.rating' does not render in the first ui rendered, So it's show in scrolling
     document.addEventListener("scroll", this.mountRating);
   },
   unmounted() {

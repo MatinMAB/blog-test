@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 import axios from "axios";
 
 export default createStore({
+  //Our State in Our Project
   state() {
     return {
       post:{},
@@ -47,6 +48,7 @@ export default createStore({
       isLoggedIn : false,
     };
   },
+  //Mutations to Set State
   mutations: {
     SET_POSTS(state, payload) {
       state.posts = payload;
@@ -55,9 +57,12 @@ export default createStore({
       state.post = payload;
     },
   },
+  //Action works like Methods to dispatch Something
   actions: {
     getPosts(context) {
-      axios.get("https://jsonplaceholder.typicode.com/posts?_limit=12").then((res) => context.commit("SET_POSTS", res.data));
+      axios.get("https://jsonplaceholder.typicode.com/posts?_limit=12").then((res) => 
+      context.commit("SET_POSTS", res.data)
+      );
     },
     getPost(context,payload) {
       axios.get(`https://jsonplaceholder.typicode.com/posts/${payload}`).then((res) => context.commit("SET_POST", res.data));

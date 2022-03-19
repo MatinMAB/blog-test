@@ -1,10 +1,14 @@
 <template lang="">
   <div>
-    <p style="direction:ltr">این تیتر صرفا یک متن تستی است برای تیتر خبر های سایت</p>
+    <p style="direction: ltr">
+      این تیتر صرفا یک متن تستی است برای تیتر خبر های سایت
+    </p>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "Marquee",
+};
 </script>
 <style scoped>
 div {
@@ -12,7 +16,7 @@ div {
   color: #fff;
   padding: 8px;
   overflow: hidden;
-  line-height:8px;
+  line-height: 8px;
 }
 p {
   -moz-animation: marquee 18s linear infinite;

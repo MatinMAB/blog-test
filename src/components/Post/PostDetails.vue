@@ -153,13 +153,11 @@
   </div>
 </template>
 <script>
+//use Store State
 import { mapState } from "vuex";
 
 export default {
   name: "PostDetails",
-  data() {
-    return {};
-  },
   computed: {
     ...mapState(["post", "isLoggedIn"]),
   },

@@ -15,6 +15,7 @@
 </template>
 
 <script>
+//Components
 import HomePosts from "./HomePosts";
 import Sidebar from "../shared/Sidebar";
 

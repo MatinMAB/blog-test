@@ -6,6 +6,7 @@
   <Footer/>
 </template>
 <script>
+//Components
 import Navbar from "../components/shared/Navbar.vue";
 import PostContent from "../components/Post/PostContent.vue";
 import RelativePosts from "../components/Post/RelativePosts.vue";
